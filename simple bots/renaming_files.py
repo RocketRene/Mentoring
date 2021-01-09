@@ -12,7 +12,7 @@ type_fiter = '.docx'
 dir_content = os.listdir('.')
 #iterarte trough the items in the list and use a build in method to check if the element is a file
 docs = [doc for doc in dir_content if os.path.isfile(doc)]
-#initalize a counter vatiable
+#initalize a counter variable
 renamed = 0 
 
 #print the number of files and elements in the current folder
