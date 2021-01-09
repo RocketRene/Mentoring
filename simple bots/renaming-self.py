@@ -19,7 +19,7 @@ for doc in docs :
         if search in filename:
             
             new_name = filename.replace(search,replace)+filetype
-            #doc.os.path.rename(doc,new_name) 
+            os.rename(doc,new_name) 
             renamed += 1
             print(f"Renamed {renamed}: {doc} ----> {new_name}\n")
-            
+
