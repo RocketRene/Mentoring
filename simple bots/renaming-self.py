@@ -1,7 +1,7 @@
 import os 
 
-search  = 'file'
-replace = 'document'
+search  = 'document'
+replace = 'file'
 filetype = '.docx'
 renamed = 0 
 
