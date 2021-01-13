@@ -1,15 +1,16 @@
 #import Operatin System Libary
 import os
+#import arparse libary to use arguments 
 import argparse
 
-
+#Creating an argument parser object
 parser = argparse.ArgumentParser(description='Batch rename files in directory')
-
+#Adding Arguments to parse 
 parser.add_argument("search",type=str,help="To be replaced text")
 parser.add_argument("replace",type=str,help="Text to use for replacement")
 parser.add_argument("--filetype",type=str,default=None,help="Only files with the given type will be renamed (e.g.  .txt)")
 parser.add_argument("--path" ,type=str, default=".",help="Directory path that contains the to be renamed files ")
-
+#calling the parse_args method to parse all arguments
 args = parser.parse_args()
 
 
