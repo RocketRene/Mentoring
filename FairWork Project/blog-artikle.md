@@ -148,3 +148,4 @@ window.mainloop()
 - Let the User Choose the Upload Folder Path and the Project Path
 - Display the Image that is renamed for a few seconds 
 - Improve my writing to make my work more reproducible and easier to understand
+- Find Images for the Blog Post
