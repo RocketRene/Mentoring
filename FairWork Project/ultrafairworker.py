@@ -1,24 +1,7 @@
 import os
 from datetime import datetime
 import tkinter as tk
-
-
-import tkinter as tk 
-
-
-window = tk.Tk()
-
-window.title("ULTRA-FAIRWORKER")
-
-window.geometry('300x200')
-
-
-title = tk.Label(text="Hallo Ludolf")
-title.grid()
-
-
-
-
+from PIL import ImageTk,Image  
 
 
 images = [] # List in witch all images are stored with there full path as a string
@@ -44,6 +27,7 @@ def rename_images(project_path):
     global renamed
     os.chdir(project_path)
     for image in images : 
+        
         all_parts = []
         path = os.path.normpath(image)
         path = path.split(os.sep)
@@ -55,15 +39,33 @@ def rename_images(project_path):
         renamed += 1
         new_path = project+'/'+day_created+'-'+creator+str(renamed)+filetype
         os.rename(image,new_path)
+        
+        
     print(f"All {renamed} Images are renamed and moved to the new location")
 
 def run():
     get_images(fairworker_path)
     rename_images(project_path)
     print("Great job")
+
+
+window = tk.Tk()
+
+window.title("ULTRA-FAIRWORKER")
+
+window.geometry('300x200')
+
+window.config(bg='yellow')
+
+title = tk.Label(text="Hallo Ludolf! \n Willkommen beim Ultra Fairworker Programm. \n Lass uns einfach alle Bilder auf einmal  \numbennen und in die BV Ordner schieben")
+title.pack()
+
+
     
 
-button1 = tk.Button(text="Feuer Frei!", bg="red",command=run)
-button1.grid(column=0,row=2)
+button1 = tk.Button(window, text="Feuer Frei!", background='black',fg='blue',command=run)
+button1.pack()
+
+
 
 window.mainloop()
