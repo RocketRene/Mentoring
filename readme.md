@@ -1,7 +1,8 @@
 # What I want to learn 
 
 - VS Code
-- What is Aarve 
+- Crypto 
+- Uniswap 
 - How to write smart contracts ?
 - How to write python automation scripts 
 - How to deploy docker images 
